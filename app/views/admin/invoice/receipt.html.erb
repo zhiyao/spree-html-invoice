@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link type="text/css" rel="stylesheet"  href="/stylesheets/admin/html-receipt.css" media="screen">
-<link type="text/css" rel="stylesheet"  href="/stylesheets/admin/html-receipt-print.css" media="print">
+<%= stylesheet_link_tag "admin/html-receipt" %>
+<%= stylesheet_link_tag "admin/html-receipt-print" , :media => "print" %>
 <title><%= I18n.t("#{params[:template]}.header") %></title>
 </head>
 
