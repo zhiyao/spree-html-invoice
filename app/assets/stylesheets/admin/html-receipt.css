@@ -1,55 +1,50 @@
+@page  { 
+	margin-left:1mm;
+	margin-right:1mm;
+	margin-top:1mm;
+	margin-bottom:1mm;
+	 }
 
 body {
-    font-family:verdana;
-	color:#cc0000;
+    font-family:"Trebuchet MS";
+	font-size:13px;
+	color:#000000;
+    width: 310px;
+ 
 }
 
 
 div.header {
-  width: 620px;
-  height: 150px;	
-}
-div.address {
-  width: 620px;
-  border-top:1px solid grey;
-  margin-bottom: 10px;
+  height: 100px;
+  font-size:16px;
+  text-align: center;
   padding: 6px;
-
 }
+
 .line_items {
-  width: 620px;
+  width: 300px;
 }
 div.wrapper {
-  width: 620px;
-  height: 540px;
-  border-top:1px solid grey;
+  width: 300px;
+  height: 450px;
   padding: 6px;
 
 }
 
-div.thanks {
-  width: 620px;
-  height: 110px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-div.spacer {
-  width: 620px;
-}
 div.totals {
-  height: 100px;
+  height: 80px;
   margin-bottom: 20px;
-  float: right;
+  padding: 6px;
 }
 
 .totals .cell {
-  width: 130px;
+  width: 180px;
 }
 
 div.footer {
-  width: 620px;
-  border-top:1px solid grey;
+  width: 300px;
   padding: 6px;
+  text-align: center;
 }
 
 .footer .bold {
