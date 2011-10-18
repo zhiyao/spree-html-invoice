@@ -26,7 +26,8 @@ INSTALLATION
 
 5. Enjoy!
 
- 
+PS: As I don't release gems, for better version control you may wish to clone the repository. If you have improvements, please send pull though.
+
 Configuration
 ==============
 
