@@ -2,7 +2,7 @@
 bill_address = @order.bill_address
 ship_address = @order.ship_address
 anonymous = @order.email =~ /@example.net$/
-if anonymous and Spree::Config[:suppress_anonymous_address]
+if (anonymous and Spree::Config[:suppress_anonymous_address]) or !bill_address
   addresses = [[" "," "]] * 5 
 else
   addresses = [[  "#{bill_address.firstname} #{bill_address.lastname}",  "#{ship_address.firstname} #{ship_address.lastname}"]]

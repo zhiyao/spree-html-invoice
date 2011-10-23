@@ -11,7 +11,7 @@
     <td class="cell"><%=item.variant.product.sku unless @receipt%></td>
     <td class="cell"><%=item.variant.product.name%></td>
     <td class="cell"><%=number_to_currency(item.price) unless @packaging_slip or @receipt%></td>
-    <td class="cell"><%=item.quantity unless @receipt %></td>
+    <td class="cell"><%=item.quantity %></td>
     <td class="cell" align="right"><%=number_to_currency(item.price * item.quantity) unless
      @packaging_slip%></td>
   </tr>
