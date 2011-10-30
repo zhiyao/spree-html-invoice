@@ -12,8 +12,8 @@
       <%= render :partial => "r_header" %>
     </div>
     <div class="info">
-      <%=I18n.l @order.completed_at.to_date%> <br>
-      kuitti <%=@order.number%> <!-- myyjä Minna -->
+      <%=I18n.l @order.completed_at.to_date%>&nbsp;/&nbsp;
+      kuitti <%=@order.number%> <!-- myyjä Minna --><br>
     </div>
     <div class="wrapper">
       <div class="line_items">
