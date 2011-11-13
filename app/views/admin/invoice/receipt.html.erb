@@ -12,7 +12,7 @@
       <%= render :partial => "r_header" %>
     </div>
     <div class="info">
-      <%=I18n.l @order.completed_at.to_date%>&nbsp;/&nbsp;
+      <%=I18n.l(@order.completed_at.to_date) if @order.completed_at %>&nbsp;/&nbsp;
       kuitti <%=@order.number%> <!-- myyjä Minna --><br>
     </div>
     <div class="wrapper">
