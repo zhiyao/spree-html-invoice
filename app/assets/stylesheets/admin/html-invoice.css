@@ -63,7 +63,7 @@ div.footer {
 
 .title { font-weight: bold; color: #FF9933; font-size: 18px; }
 .bold { font-weight: bold; }
-.cell { ; }
+.price { width: 55px ; }
 
 table.address{
   width: 620px;
