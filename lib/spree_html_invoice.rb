@@ -16,6 +16,11 @@ module HtmlInvoice
 
     end
 
+    # sets the manifests / assets to be precompiled
+    initializer "spree.assets.precompile", :group => :assets do |app|
+      app.config.assets.precompile += [ 'admin/html-invoice.css' , 'admin/html-receipt.css']
+    end
+
     config.to_prepare &method(:activate).to_proc
   end
 end
