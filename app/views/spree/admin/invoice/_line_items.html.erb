@@ -1,0 +1,22 @@
+<table class="line_items" >
+  <tr>
+    <td class="sku bold"><%= I18n.t(:sku) unless @receipt %></td>
+    <td class="desc bold"><%= I18n.t(:item_description) %></td>
+    <td class="size bold"><%= I18n.t(:size) %></td>
+    <td class="price bold"><%=I18n.t(:price) %></td>
+    <td class="qty bold"><%=I18n.t(:qty) %> </td>
+    <td class="total bold" align="right"><%=I18n.t(:total) %></td>
+  </tr>
+  <% @order.line_items.each do |item| %>
+  <tr>
+    <td class="cell"><%=item.variant.sku unless @receipt%></td>
+    <td class="cell"><%= item.variant.product.fullname rescue item.variant.product.name %></td>
+    <td class="cell"><%= item.variant.options_text %></td>
+    <td class="cell"><%=number_to_currency(item.price) %></td>
+    <td class="cell"><%=item.quantity %></td>
+    <td class="cell" align="right"><%=number_to_currency(item.amount) %></td>
+  </tr>
+  <% end %>
+</table>
+  
+
