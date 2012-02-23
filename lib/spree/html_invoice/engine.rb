@@ -1,4 +1,3 @@
-puts "Loading spree_html_invoice"
 module Spree
   module HtmlInvoice
     class Engine < Rails::Engine
