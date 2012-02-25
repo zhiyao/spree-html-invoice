@@ -23,6 +23,10 @@ module Spree
 
       config.autoload_paths += %W(#{config.root}/lib)
       config.to_prepare &method(:activate).to_proc
+
+      initializer "spree_html_invoice.assets.precompile", :after => "spree.assets.precompile" do |app|
+        app.config.assets.precompile += [ "admin/html-invoice.css", "admin/html-receipt.css" ]
+      end
     end
   end
 end
