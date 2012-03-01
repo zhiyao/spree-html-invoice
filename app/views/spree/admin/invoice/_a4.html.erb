@@ -16,7 +16,7 @@
     </div>
     <div class="wrapper">
       <div class="line_items">
-        <%= render :partial => "line_items" %>
+        <%= render :partial => "line_items_#{params[:template]}" %>
       </div>
       <div class="thanks">
         <%= render :partial => "thanks" %>
@@ -24,7 +24,7 @@
       <div class="spacer"> &nbsp;
       </div>
       <div class="totals">
-        <%= render :partial => "totals" %>
+        <%= render :partial => "totals_#{params[:template]}" %>
       </div>
     </div>
     <% unless @packaging_slip %>

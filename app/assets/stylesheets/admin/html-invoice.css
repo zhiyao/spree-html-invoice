@@ -25,6 +25,15 @@ div.address {
 .line_items {
   width: 620px;
 }
+
+.line_items .price, .line_items .total {
+  text-align: right;
+}
+
+.line_items .qty {
+  text-align: center;
+}
+
 div.wrapper {
   width: 620px;
   height: 540px;
