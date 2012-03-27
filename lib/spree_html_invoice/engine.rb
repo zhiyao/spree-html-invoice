@@ -1,3 +1,5 @@
+module Spree::HtmlInvoice; end
+
 module SpreeHtmlInvoice
   class Engine < Rails::Engine
     engine_name 'spree_html_invoice'
@@ -6,6 +8,10 @@ module SpreeHtmlInvoice
 
     initializer "spree_html_invoice.assets.precompile", :after => "spree.assets.precompile" do |app|
       app.config.assets.precompile += [ "admin/html-invoice.css", "admin/html-receipt.css" ]
+    end
+
+    initializer "spree.spree_html_invoice.preferences", :after => "spree.environment" do |app|
+      Spree::HtmlInvoice::Config = Spree::HtmlInvoiceConfiguration.new
     end
 
     def self.activate
