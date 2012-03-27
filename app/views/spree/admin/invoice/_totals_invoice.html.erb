@@ -1,5 +1,5 @@
 <table class="totals">
-  <% order_mrp_total = @order.line_items.map{|i| i.mrp * i.quantity}.sum %>
+  <% order_mrp_total = @order.line_items.map{|i| i.price * i.quantity}.sum %>
   <% if order_mrp_total != @order.item_total %>
     <tr>
       <td class="cel1 bold"><%= t(:mrp_total) %>: </td>

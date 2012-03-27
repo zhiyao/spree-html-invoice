@@ -1,9 +1,9 @@
-version = '0.0.1'
+# coding: UTF-8
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_html_invoice'
-  s.version     = version
+  s.version     = '1.0.0'
   s.summary     = 'Print invoices from a spre order'
   s.required_ruby_version = '>= 1.8.7'
   s.authors = ["Torsten Rüger", "Chandramohan Rangaswamy"]

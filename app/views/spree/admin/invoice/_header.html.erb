@@ -1,6 +1,6 @@
 <table class="header">
   <tr>
-    <td width="345"><img src="<%= asset_path Spree::Config[:html_invoice_logo_path]%>" alt="logo"/></td>
+    <td width="345"><%= image_tag Spree::HtmlInvoice::Config[:html_invoice_logo_path] %></td>
     <td width="345">
       <div class="cod">
         <% if @order.payment_method.class.name == 'Spree::CashOnDelivery::PaymentMethod' %>
