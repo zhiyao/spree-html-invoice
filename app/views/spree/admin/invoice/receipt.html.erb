@@ -9,24 +9,24 @@
 <body onLoad="self.print()"> 
   <div class="receipt">
     <div class="header">
-      <%= render :partial => "r_header" %>
+      <%= render :partial => "spree/admin/invoice/receipt_header" %>
     </div>
     <div class="info">
       <%=I18n.l(@order.completed_at.to_date) if @order.completed_at %>&nbsp;/&nbsp;
-      kuitti <%=@order.number%> <!-- myyjä Minna --><br>
+      <%= t(:order_number) %> <%=@order.number%><br>
     </div>
     <div class="wrapper">
       <div class="line_items">
-        <%= render :partial => "line_items" %>
+        <%= render :partial => "spree/admin/invoice/line_items_invoice" %>
       </div>
       <div class="spacer"> &nbsp;
       </div>
       <div class="totals">
-        <%= render :partial => "totals" %>
+        <%= render :partial => "spree/admin/invoice/totals_invoice" %>
       </div>
     </div>
     <div class="footer">
-      <%= render :partial => "r_footer" %>
+      <%= render :partial => "spree/admin/invoice/receipt_footer" %>
     </div>
   </div>
 </body>
