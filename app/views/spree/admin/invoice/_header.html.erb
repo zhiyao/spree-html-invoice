@@ -2,11 +2,11 @@
   <tr>
     <td width="345"><%= image_tag Spree::HtmlInvoice::Config[:html_invoice_logo_path] %></td>
     <td width="345">
+      <% if @order.payment_method.class.name == 'Spree::CashOnDelivery::PaymentMethod' %>
       <div class="cod">
-        <% if @order.payment_method.class.name == 'Spree::CashOnDelivery::PaymentMethod' %>
         <%= "COD - #{number_to_currency(@order.total)}" %>
-        <% end %>
       </div>
+      <% end %>
     <div align="right">
       <p class="title"><%= I18n.t("#{params[:template]}.header") %></p>
       <p class="bold"><%= I18n.t(:order_number).to_s + " " + @order.number  %></p>
