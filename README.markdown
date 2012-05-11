@@ -10,11 +10,12 @@ If you need server-side pdf generation, use the spree-print-invoice extension.
 INSTALLATION
 ============
 
-For spree 0.7, ie using deface and rails 3.1. There is a brach 0.60 for an older version.
+For spree 1.0, There is a tag for 0.7.
+
 As I don't release gems, for better version control you may wish to clone the repository. 
 If you have improvements, please send pull though.
 
-1. To install you need to add the following lines to your Gemfile (no external dependendies)
+1. To install you need to add the following lines to your Gemfile (no external dependencies)
 
     gem 'spree_html_invoice' , :git => 'git://github.com/dancinglightning/spree-html-invoice.git'
 
@@ -42,17 +43,17 @@ Configuration
 
 4. Enable packaging slips, by setting 
 
-  Spree::HtmlInvoice::Config.set(:html_buttons => "invoice,packaging_slip"  #comma separated list
+  Spree::HtmlInvoice::Config.set(:print_buttons => "invoice,packaging_slip"  #comma separated list
 
- Use above feature for your own template if you want. For each button_name, define a subsection with header, print, and thanks, in your locale.
+  Use above feature for your own template if you want. For each button_name, define a subsection with header,   print, and thanks, in your locale.
 
 
 Extra
 =====
 
-There is now a receipt template, for a normal receipt printer (ie 70mm). This works for us, but is not quite finished.
+There is now a receipt template, for a normal receipt printer (ie 70mm). This works for us, but what about you?
 
-Barcodes have gone to their own package spree-product-barcodes a(and they are starting to work too)
+Barcodes have gone to their own package spree-product-barcodes
 
 Contributions welcome
 
