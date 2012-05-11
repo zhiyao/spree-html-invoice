@@ -14,16 +14,6 @@ else
 end
 %>
 <table class="address">
-  <% if @packaging_slip %>
-  <tr>
-    <td class="shipping_header bold"><%= I18n.t(:shipping_address) %></td>
-  </tr>
-  <% addresses.each do |row| %>
-  <tr>   
-    <td height="15px" class="shiping_header" class="cell"><%=row[1]%> </td>
-  </tr>
-  <%end%>
-  <% else %>
   <tr>
     <td width="45%" class="billing_header bold"><%=I18n.t(:billing_address)%></td>
     <td width="17%"></td>
@@ -35,7 +25,6 @@ end
     <td width="17%"></td>
       <td height="15px" width="45%" class="shiping_header" class="cell"><%=row[1]%> </td>
     </tr>
-  <%end%>
   <% end %>
 </table>
 
