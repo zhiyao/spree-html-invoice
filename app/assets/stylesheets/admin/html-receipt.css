@@ -13,11 +13,15 @@ body {
 }
 
 
-div.header {
+div#header {
   text-align: center;
   padding: 6px;
   line-height: 1.3;
   width: 330px;
+}
+
+#header img {
+  max-width: 270px;
 }
 
 .shop { font-weight: bold; font-size: 30px; line-height: 1.2;}
@@ -38,10 +42,24 @@ div.totals {
   padding: 6px;
 }
 
-.totals .cell {
-  width: 180px;
+table.totals {
+  width: 294px;
 }
 
+
+.cell.total {
+  text-align: right;
+}
+
+.cel1 {
+  width: 200px;
+}
+
+.cel2 {
+  width: 80px;
+}
+
+ 
 div.footer {
   width: 300px;
   padding: 6px;
