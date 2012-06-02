@@ -43,7 +43,7 @@ Configuration
 
 4. Enable packaging slips, by setting 
 
-  Spree::HtmlInvoice::Config.set(:print_buttons => "invoice,packaging_slip"  #comma separated list
+  Spree::HtmlInvoice::Config.set(:print_buttons => "invoice,packaging_slip")  #comma separated list
 
   Use above feature for your own template if you want. For each button_name, define a subsection with header,   print, and thanks, in your locale.
 
