@@ -1,7 +1,7 @@
 SUMMARY
 =======
 
-This extension provides a "Print Invoice" button on the Admin Orders view screen which opens a prinatble html page with the order details.
+This extension provides a "Print Invoice" button on the Admin Orders view screen which opens a printable html page with the order details.
 
 You have to set up your computer for printing, or PDF generation. Off course, if you cave a mac that is as easy as pressing the print + save as pdf buttons.
 
@@ -39,11 +39,11 @@ Configuration
 
 2. Override any of the partial templates. they are address, footer, totals, header, thanks , and the line_items. The whole tanks is wrapped in a thanks hook, so replace or add at will.
 
-3. Set :suppress_anonymous_address option to get blank addresses for anonymous email addresses (as created by my spree_last_address extension for empty/unknown user info)
+3. Set Spree::HtmlInvoice::Config.set(:suppress_anonymous_address) option to get blank addresses for anonymous email addresses (as created by my spree_last_address extension for empty/unknown user info)
 
 4. Enable packaging slips, by setting 
 
-  Spree::HtmlInvoice::Config.set(:print_buttons => "invoice,packaging_slip"  #comma separated list
+  Spree::HtmlInvoice::Config.set(:print_buttons => "invoice,packaging_slip")  #comma separated list
 
   Use above feature for your own template if you want. For each button_name, define a subsection with header,   print, and thanks, in your locale.
 
