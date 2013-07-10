@@ -3,7 +3,7 @@
     <td width="345"><%= image_tag Spree::HtmlInvoice::Config[:html_invoice_logo_path] || "store/invoice_logo.jpg", :id => "logo" %></td>
     <td width="345">
 
-      <% cash_on_delivery = @order.payments.map { |p| p.payment_method.class.name }.reduce { |cn| cn ==
+      <% cash_on_delivery = @order.payments.map { |p| p.payment_method.class.name }.select { |cn| cn ==
           'Spree::CashOnDelivery::PaymentMethod' } %>
       <% if cash_on_delivery.length > 0 %>
       <div class="cod">
