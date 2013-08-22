@@ -1,5 +1,15 @@
 <table class="totals">
 
+  <%- @adjustments.each do |adjustment| %>
+  <tr>
+    <td>
+      <%= adjustment.label %>:
+    </td>
+    <td class="cell total">
+      <%= adjustment.display_amount %>
+    </td>
+  </tr>
+  <%- end %>
   <tr>
 
     <td class="cel1 bold">

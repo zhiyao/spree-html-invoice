@@ -16,9 +16,7 @@
     <td class="cel1 bold"><%= t(:item_total) %>: </td>
     <td class="cel2 bold cell" align="right"><%= number_to_currency @order.item_total %></td>
   </tr>
-  <% @order.adjustments.eligible.each do |adjustment| %>
-  <% next if (adjustment.originator_type == 'Spree::TaxRate') and (adjustment.amount == 0) %>
-  <% next if  (adjustment.amount == 0) %>
+  <% @adjustments.each do |adjustment| %>
   <tr>
     <td class="cel1 bold"><%= adjustment.label %>: </td>
     <td class="cel2 cell" align="right"><%= number_to_currency adjustment.amount %></td>
