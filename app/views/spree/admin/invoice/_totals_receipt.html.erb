@@ -1,8 +1,20 @@
 <table class="totals">
 
   <tr>
-    <td class="cel1 bold"><strong><%= t(:order_total) %>:</strong></td>
-    <td class="cel2 cell" align="right"><strong><span id='summary-order-total'><%= number_to_currency @order.total %></span></strong></td>
+
+    <td class="cel1 bold">
+      <strong>
+        <%= t(:order_total) %>:
+      </strong>
+    </td>
+
+    <td class="cel2 cell" align="right">
+      <strong>
+        <span id='summary-order-total'>
+          <%= @order.display_total.to_html %>
+        </span>
+      </strong>
+    </td>
   </tr>
   <% if @order.price_adjustment_totals.present? %>
   <tr>
