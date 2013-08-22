@@ -1,4 +1,7 @@
-<br>
-<%= Spree::Config[:site_url] %><br/>
-info@<%= Spree::Config[:site_url] %><br/>
-puh 09- 621 7001
+<div class="url">
+  <%= Spree::Config[:site_url] %>
+</div>
+
+<div class="email">
+  <%= Spree::HtmlInvoice::Config[:html_receipt_email] %>
+</div>
