@@ -17,19 +17,19 @@
     <tr>
       <td class="cell"><%= item.variant.sku unless @receipt%></td>
       <td class="cell"><%= item.variant.product.fullname rescue item.variant.product.name %></td>
-      <td class="cell price"><%= item.price.display_price.to_html unless @receipt %></td>
+      <td class="cell price"><%= item.single_money.to_html unless @receipt %></td>
       <td class="cell qty"><%= item.quantity %></td>
       <td class="cell total">
-        <%= Spree::Money.new(item.price * item.quantity).to_html %>
+        <%= item.display_amount.to_html %>
       </td>
     </tr>
     <% if item.respond_to? :discount and item.discount > 0 %>
       <tr>
         <td class="cell">&nbsp;</td>
         <td class="cell">(<%= t(:discount) %>)</td>
-        <td class="cell price"><%= Spree::Money.new(-1 * item.discount).to_html %></td>
+        <td class="cell price">-<%= item.single_money %></td>
         <td class="cell qty">&nbsp;</td>
-        <td class="cell total"><%= Spree::Money.new(-1 * item.discount * item.quantity).to_html %></td>
+        <td class="cell total">-<%= item.display_amount.to_html %></td>
       </tr>
     <% end %>
   <% end %>
