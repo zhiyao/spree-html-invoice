@@ -1,24 +1,15 @@
-Update
-========
-
-Notice of demolition: this rep WILL be removed. Go fork, even register your fork on spreecommerce, but don't sent pushes.
-
 SUMMARY
 =======
 
 This extension provides a "Print Invoice" button on the Admin Orders view screen which opens a printable html page with the order details.
 
-You have to set up your computer for printing, or PDF generation. Off course, if you cave a mac that is as easy as pressing the print + save as pdf buttons.
+It also adds the ability to create receipt, with the purpose of using it directly from a POS.
 
-If you need server-side pdf generation, use the spree-print-invoice extension.
+
+NOTE: If you need server-side pdf generation, use the spree-print-invoice extension.
  
 INSTALLATION
 ============
-
-For spree 1.0, There is a tag for 0.7.
-
-As I don't release gems, for better version control you may wish to clone the repository. 
-If you have improvements, please send pull though.
 
 1. To install you need to add the following lines to your Gemfile (no external dependencies)
 
@@ -28,13 +19,17 @@ If you have improvements, please send pull though.
 
     bundle install
 
-3. Configure your logo and footer text or more. It's easy as it's html.
-
 4. Enjoy!
 
 
 Configuration
 ==============
+
+**Have to re-write this part**
+
+Now we have more option for configuration.
+
+---
 
 1. Set the logo path preference to include your store / company logo.
 
@@ -53,13 +48,11 @@ Configuration
   Use above feature for your own template if you want. For each button_name, define a subsection with header,   print, and thanks, in your locale.
 
 
-Extra
+There is now a receipt template, for a normal receipt printer (ie 70mm).
+
+TO-DO
 =====
-
-There is now a receipt template, for a normal receipt printer (ie 70mm). This works for us, but what about you?
-
-Barcodes have gone to their own package spree-product-barcodes
-
-Contributions welcome
-
-Torsten
+ 
+ * Refactor the invoice layout
+ * Add option for customer to being able to print invoices
+ * TESTS!!!!
