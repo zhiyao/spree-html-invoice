@@ -1,5 +1,5 @@
 Spree::Core::Engine.routes.append do
   namespace :admin do
-    match 'invoice/:id(/:template)' => 'invoice#lasku'
+    get 'invoice/:id(/:template)' => 'invoice#lasku'
   end
 end
