@@ -1,4 +1,4 @@
-<%- unless Spree::HtmlInvoice::Config[:html_receipt_logo_path].empty? %>
+<%- unless Spree::HtmlInvoice::Config[:html_receipt_logo_path].nil? %>
   <figure class="logo">
     <%= image_tag Spree::HtmlInvoice::Config[:html_receipt_logo_path], :id => "logo" %>
   </figure>
