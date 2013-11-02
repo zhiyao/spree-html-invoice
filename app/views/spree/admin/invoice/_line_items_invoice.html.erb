@@ -7,11 +7,11 @@
     <col class="total"/>
   </colgroup>
   <tr>
-    <td class="sku bold"><%= t(:sku) unless @receipt %></td>
-    <td class="desc bold"><%= t(:item_description) %></td>
-    <td class="price bold"><%= t(:price) unless @receipt%></td>
-    <td class="qty bold"><%= t(:qty) %> </td>
-    <td class="total bold"><%= t(:total) %></td>
+    <td class="sku bold"><%= Spree.t(:sku) unless @receipt %></td>
+    <td class="desc bold"><%= Spree.t(:item_description) %></td>
+    <td class="price bold"><%= Spree.t(:price) unless @receipt%></td>
+    <td class="qty bold"><%= Spree.t(:qty) %> </td>
+    <td class="total bold"><%= Spree.t(:total) %></td>
   </tr>
   <% @order.line_items.each do |item| %>
     <tr>
@@ -26,7 +26,7 @@
     <% if item.respond_to? :discount and item.discount > 0 %>
       <tr>
         <td class="cell">&nbsp;</td>
-        <td class="cell">(<%= t(:discount) %>)</td>
+        <td class="cell">(<%= Spree.t(:discount) %>)</td>
         <td class="cell price">-<%= item.single_money %></td>
         <td class="cell qty">&nbsp;</td>
         <td class="cell total">-<%= item.display_amount.to_html %></td>

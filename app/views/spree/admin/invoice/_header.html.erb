@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td width="345"><%= image_tag Spree::HtmlInvoice::Config[:html_invoice_logo_path] || "store/invoice_logo.jpg", :id => "logo" %></td>
+    <td width="345"><%= image_tag Spree::HtmlInvoice::Config[:html_invoice_logo_path] || "store/invoice_logo.png", :id => "logo" %></td>
     <td width="345">
 
       <% cash_on_delivery = @order.payments.map { |p| p.payment_method.class.name }.select { |cn| cn ==
@@ -11,7 +11,7 @@
       </div>
       <% end %>
     <div align="right">
-      <p class="title"><%= Spree.t("#{params[:template]}.header") %></p>
+      <p class="title"><%= t("#{params[:template]}.header") %></p>
       <p class="bold"><%= Spree.t(:order_number).to_s + " " + @order.number  %></p>
       <p class="bold"> <%= Spree.l(@order.completed_at.to_date) if @order.completed_at %></p>
     </div></td>

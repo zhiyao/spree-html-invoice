@@ -6,14 +6,14 @@
 <title><%= I18n.t("#{params[:template]}.header") %></title>
 </head>
 
-<body onLoad="self.print()"> 
+<body onLoad="self.print()">
   <div class="receipt">
     <div id="header">
       <%= render :partial => "spree/admin/invoice/receipt_header" %>
     </div>
     <div class="info">
       <%=I18n.l(@order.completed_at.to_date) if @order.completed_at %>&nbsp;/&nbsp;
-      <%= t(:order_number) %> <%=@order.number%><br>
+      <%= Spree.t(:order_number) %> <%=@order.number%><br>
     </div>
     <div class="wrapper">
       <div class="line_items">

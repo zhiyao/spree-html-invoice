@@ -1,20 +1,15 @@
-<%
-base = @order.number[1 .. -1]
-viite = open("http://www1.nordea.fi/P636V/H636VTXT.asp?action=tekstiLista&lkm=1&alkuViite=#{base}&L=1").read[/\d+ \d+/]
-%>
-
 <%unless @packaging_slip%>
 <table>
   <tr>
     <td colspan="2">
-      &nbsp;
+      <%= Spree.t(:footer_left) %>
+      <%= Spree.t(:footer_left2) %>
+    </td>
+    <td colspan="2">
+      <%= Spree.t(:footer_right) %>
+      <%= Spree.t(:footer_right2) %>
     </td>
   </tr>
-<tr>
-  <td colspan="2">
-    Maksaessasi käytä viitenumeroa: <%=viite %>
-  </td>
-</tr>
 </table>
 <%end%>
 
