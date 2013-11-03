@@ -1,6 +1,25 @@
 <table>
   <tr>
-    <td width="345"><%= image_tag Spree::HtmlInvoice::Config[:html_invoice_logo_path] || "store/invoice_logo.png", :id => "logo" %></td>
+    <td width="345"><%= image_tag Spree::HtmlInvoice::Config[:html_invoice_logo_path] || "store/invoice_logo.png", :id => "logo" %>
+      <h2>
+      <strong><%= Spree.t(:company) %></strong>
+      </h2>
+      <%= Spree.t(:company_id) %>
+      <br />
+      <%= Spree.t("company_address.street") %>
+      <br />
+      <%= Spree.t("company_address.postal") %>
+      <%= Spree.t("company_address.city") %>
+      <br />
+      <%= Spree.t("company_address.state") %>
+      <%= Spree.t("company_address.country") %>
+      <br />
+      <strong> TEL </strong>
+      <%= Spree.t(:company_tel) %>
+      <br />
+      <strong> EMAIL </strong>
+      <%= Spree.t(:company_email) %>
+    </td>
     <td width="345">
 
       <% cash_on_delivery = @order.payments.map { |p| p.payment_method.class.name }.select { |cn| cn ==
