@@ -15,7 +15,15 @@
   </tr>
   <% @order.line_items.each do |item| %>
     <tr>
-      <td class="cell"><%= item.variant.sku unless @receipt%></td>
+      <td class="cell">
+        <% unless @receipt %>
+          <% if not item.variant.sku.empty? %>
+            <%= item.variant.sku %>
+          <% else %>
+            <%= item.product.master.sku %>
+          <% end %>
+        <% end %>
+      </td>
       <td class="cell"><%= item.variant.product.fullname rescue item.variant.product.name %></td>
       <td class="cell price"><%= item.single_money.to_html unless @receipt %></td>
       <td class="cell qty"><%= item.quantity %></td>
