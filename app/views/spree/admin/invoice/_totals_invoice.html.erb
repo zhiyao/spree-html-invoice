@@ -14,18 +14,18 @@
   <% end %>
   <tr>
     <td class="cel1 bold"><%= Spree.t(:item_total) %>: </td>
-    <td class="cel2 bold cell" align="right"><%= number_to_currency @order.item_total %></td>
+    <td class="cel2 bold cell" align="right"><%= @order.display_item_total %></td>
   </tr>
   <% @adjustments.each do |adjustment| %>
   <tr>
     <td class="cel1 bold"><%= adjustment.label %>: </td>
-    <td class="cel2 cell" align="right"><%= number_to_currency adjustment.amount %></td>
+    <td class="cel2 cell" align="right"><%= adjustment.display_amount %></td>
   </tr>
   <% end %>
 
   <tr>
     <td class="cel1 bold"><strong><%= Spree.t(:order_total) %>:</strong></td>
-    <td class="cel2 cell" align="right"><strong><span id='summary-order-total'><%= number_to_currency @order.total %></span></strong></td>
+    <td class="cel2 cell" align="right"><strong><span id='summary-order-total'><%= @order.display_total %></span></strong></td>
   </tr>
   <% if @order.price_adjustment_totals.present? %>
   <tr>
@@ -36,7 +36,7 @@
   <% next unless @order.price_adjustment_totals[key] %>
   <tr class="total">
     <td class="cel1 bold"><%= key %>:</td>
-    <td class="cel2 cell" align="right"><%= number_to_currency @order.price_adjustment_totals[key] %></td>
+    <td class="cel2 cell" align="right"><%= @order.price_adjustment_totals[key] %></td>
   </tr>
   <% end %>
   <% end %>
